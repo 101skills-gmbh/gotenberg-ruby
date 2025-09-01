@@ -53,11 +53,11 @@ After having created the HTTP request (see below), you have two options:
 
 ### Chromium
 
-The [Chromium module](https://gotenberg.dev/docs/modules/chromium) interacts with the Chromium browser to convert HTML documents to PDF.
+The [Chromium module](https://gotenberg.dev/docs/routes#convert-with-chromium) interacts with the Chromium browser to convert HTML documents to PDF.
 
 #### Convert a target URL to PDF
 
-See https://gotenberg.dev/docs/modules/chromium#url.
+See https://gotenberg.dev/docs/routes#url-into-pdf-route.
 
 Converting a target URL to PDF is as simple as:
 
@@ -146,7 +146,7 @@ gotenberg_stylesheet_tag 'application.css', inline: true, skip_analyze: true
 
 #### Convert an HTML document to PDF
 
-See https://gotenberg.dev/docs/modules/chromium#html.
+See See https://gotenberg.dev/docs/routes#url-into-pdf-route.
 
 Prepare HTML content with build-in Rails methods:
 
@@ -210,7 +210,7 @@ end
 
 #### Convert one or more markdown files to PDF
 
-See https://gotenberg.dev/docs/modules/chromium#markdown.
+See https://gotenberg.dev/docs/routes#markdown-files-into-pdf-route.
 
 You may convert markdown files with:
 
@@ -479,7 +479,7 @@ end
 
 #### PDF Format
 
-See https://gotenberg.dev/docs/modules/pdf-engines#engines.
+See https://gotenberg.dev/docs/routes#pdfa-chromium.
 
 You may set the PDF format of the resulting PDF with:
 
@@ -492,12 +492,12 @@ end
 
 ### LibreOffice
 
-The [LibreOffice module](https://gotenberg.dev/docs/modules/libreoffice) interacts with [LibreOffice](https://www.libreoffice.org/) 
+The [LibreOffice module](https://gotenberg.dev/docs/routes#convert-with-libreoffice) interacts with [LibreOffice](https://www.libreoffice.org/) 
 to convert documents to PDF, thanks to [unoconv](https://github.com/unoconv/unoconv).
 
 #### Convert documents to PDF
 
-See https://gotenberg.dev/docs/modules/libreoffice#route.
+See https://gotenberg.dev/docs/routes#office-documents-into-pdfs-route.
 
 Converting a document to PDF is as simple as:
 
@@ -557,7 +557,7 @@ end
 
 #### PDF format
 
-See https://gotenberg.dev/docs/modules/pdf-engines#engines.
+See https://gotenberg.dev/docs/routes#pdfa-libreoffice.
 
 You may set the PDF format of the resulting PDF(s) with:
 
@@ -582,11 +582,11 @@ end
 
 ### PDF Engines
 
-The [PDF Engines module](https://gotenberg.dev/docs/modules/pdf-engines) gathers all engines that can manipulate PDF files.
+The [PDF Engines module](https://gotenberg.dev/docs/configuration#pdf-engines) gathers all engines that can manipulate PDF files.
 
 #### Merge PDFs
 
-See https://gotenberg.dev/docs/modules/pdf-engines#merge.
+See https://gotenberg.dev/docs/routes#merge-pdfs-route.
 
 Merging PDFs is as simple as:
 
@@ -609,7 +609,7 @@ end
 
 #### Convert to a specific PDF format
 
-See https://gotenberg.dev/docs/modules/pdf-engines#convert.
+See https://gotenberg.dev/docs/routes#convert-into-pdfa--pdfua-route.
 
 You may convert a PDF to a specific PDF format with:
 
@@ -634,7 +634,7 @@ end
 
 ### Webhook
 
-The [Webhook module](https://gotenberg.dev/docs/modules/webhook) is a Gotenberg middleware that sends the API
+The [Webhook module](https://gotenberg.dev/docs/webhook) is a Gotenberg middleware that sends the API
 responses to callbacks.
 
 ⚠️ You cannot use the `document.to_binary` method if you're using the webhook feature.
