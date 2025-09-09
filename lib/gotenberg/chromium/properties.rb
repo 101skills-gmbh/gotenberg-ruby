@@ -4,6 +4,11 @@ module Gotenberg
   class Chromium
     module Properties
 
+      # Define whether to print the entire content in one single page
+      def single_page
+        properties['singlePage'] = true
+      end
+
       # Overrides the default paper size, in inches. Examples of paper size (width x height):
       # Letter - 8.5 x 11 (default)
       # Legal - 8.5 x 14
